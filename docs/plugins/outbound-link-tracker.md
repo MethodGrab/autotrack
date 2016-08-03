@@ -62,6 +62,19 @@ The following table outlines all possible configuration options for the `outboun
     </td>
   </tr>
   <tr valign="top">
+      <td><code>fallback</code></a></td>
+      <td><code>string</code>|<code>Boolean</code></a></td>
+      <td>The fallback technique to use in browsers that do not support <code>Navigator.sendBeacon</code>.<br>
+      Valid options: <code>'_blank'</code>, <code>'wait'</code>, <code>false</code><br>
+      <strong>Default:</strong> <code>'_blank'</code></td>
+  </tr>
+  <tr valign="top">
+      <td><code>fallbackWait</code></a></td>
+      <td><code>number</code></a></td>
+      <td>Used with <code>fallback: 'wait'</code> to specify the timeout in ms to wait before navigating even if the event has not sucessfully tracked.<br>
+      <strong>Default:</strong> <code>500</code></td>
+  </tr>
+  <tr valign="top">
     <td><code>fieldsObj</code></a></td>
     <td><code>Object</code></a></td>
     <td>See the <a href="/docs/common-options.md#fieldsobj">common options guide</a> for the <code>fieldsObj</code> description.</td>
